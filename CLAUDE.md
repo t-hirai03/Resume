@@ -9,7 +9,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## ファイル構成
 
 - `README.md` - 職務経歴書（公開用）
-- `job-search.md` - 転職活動の整理（非公開メモ）
+- `docs/job-search.md` - 転職活動の整理（非公開メモ）
+- `docs/task.md` - 作成タスク進捗管理
 
 ## 注意事項
 
