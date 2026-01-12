@@ -4,9 +4,9 @@
 
 | 項目 | 内容 |
 |------|------|
-| 氏名 | （後で記載） |
-| 生年月日 | （後で記載） |
-| 居住地 | （後で記載） |
+| 氏名 | 平井 隆裕 |
+| 生年月日 | 1995年9月23日 |
+| 居住地 | 神奈川県 |
 
 ## 職務要約
 
@@ -20,7 +20,7 @@ Webエンジニアとして、フロントエンドからインフラまで幅�
 | バックエンド | Node.js, Supabase (PostgreSQL), Rails (フロント部分) |
 | インフラ | Terraform/Terragrunt, GCP (BigQuery, Cloud Run, Cloud SQL, Secret Manager), Docker |
 | CI/CD | GitHub Actions, キーレス認証 (Workload Identity Federation) |
-| その他 | WordPress, Playwright, Google Maps API |
+| その他 | WordPress, microCMS, Playwright, Google Maps API |
 
 ## 職務経歴
 
@@ -48,6 +48,7 @@ Webエンジニアとして、フロントエンドからインフラまで幅�
 
 **成果:**
 - rimawarikun関連PR: 27件
+- サービスURL: https://rimawarikun.com/
 
 ---
 
@@ -67,11 +68,14 @@ Webエンジニアとして、フロントエンドからインフラまで幅�
 
 **行動・判断:**
 - 自ら設計・提案してChatwork/Notion連携を実装
-- チャットボット（塗装見積もり→電話番号入力→リード獲得）をNext.jsで作成
+- チャットボット（塗装見積もり→電話番号入力→リード獲得）をNext.jsで設計・開発
 
 **成果:**
+- 自作チャットボットで**月間約40件のリード獲得**に貢献（CPA約13,000円で安定稼働）
 - Chatwork通知連携でお問い合わせの見逃し防止
 - 流入経路の把握を可能に
+- チャットボットURL: https://estimate.starpaint.jp/ / https://estimate.starpaint.jp/subsidy/
+- サイトURL: https://starpaint.jp/ / https://magazine.starpaint.jp/ / https://fc.starpaint.jp/
 
 ---
 
@@ -100,6 +104,7 @@ Webエンジニアとして、フロントエンドからインフラまで幅�
 - 月50〜100分の手動作業削減（月10回更新 × 5〜10分）
 - 本番前にローカルで検証可能に
 - PR作成→マージで更新完了する運用に
+- サイトURL: https://syla-holdings.jp/ / https://syla.jp/ / https://syla-solar.jp/
 
 ---
 
@@ -126,6 +131,7 @@ Webエンジニアとして、フロントエンドからインフラまで幅�
 - 約2〜3週間でMVP開発
 - 200件の物件データに対応
 - 47ファイルのTypeScript/React/Astroコードを実装
+- サービスURL: https://syla-properties-map.vercel.app/
 
 ---
 
@@ -168,6 +174,17 @@ Web制作・Web更新代行サービスを提供する企業にて、Webエン�
 | 役割 | Webサイト制作、Webサイト更新代行 |
 | 技術 | WordPress, Astro |
 
+**制作実績（9サイト）:**
+- https://kait-ext.securesite.jp/company/index.html
+- https://jgi-inc.com/
+- https://beyerdynamic.co.jp/
+- https://karayasankyo.com/
+- https://tg-misawawork.sakura.ne.jp/nasuworkation/
+- https://chunichi-chishitsu.com/
+- https://kaneki-unyu.co.jp/
+- https://obataseishijo.jp/lp/
+- https://takazen-sangyo.com/
+
 ---
 
 ### 株式会社パワーシステム（2018年4月〜2021年10月）
@@ -179,7 +196,7 @@ SES企業にて、フロントエンド・バックエンドエンジニアと�
 | 事業内容 | SES |
 | 役割 | フロントエンド・バックエンド開発、仕様書作成 |
 | 技術 | Vue.js, Java, PostgreSQL |
-| 主な案件 | 福井県民衛生プロジェクト |
+| 主な案件 | 福井県民衛星プロジェクト |
 
 ---
 
