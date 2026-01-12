@@ -20,7 +20,7 @@ Webエンジニアとして、フロントエンドからインフラまで幅�
 | バックエンド | Node.js, Supabase (PostgreSQL), Rails (フロント部分) |
 | インフラ | Terraform/Terragrunt, GCP (BigQuery, Cloud Run, Cloud SQL, Secret Manager), Docker |
 | CI/CD | GitHub Actions, キーレス認証 (Workload Identity Federation) |
-| その他 | WordPress, Playwright, Google Maps API |
+| その他 | WordPress, microCMS, Playwright, Google Maps API |
 
 ## 職務経歴
 
