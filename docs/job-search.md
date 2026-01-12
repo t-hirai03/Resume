@@ -104,19 +104,28 @@
 
 > 「チーム開発でフロントエンドの専門性を深めたい。現職では一人で対応する範囲が広く、技術を深掘りする機会が限られていた」
 
-### 言い換え案（要ブラッシュアップ）
+### 言い換え案
 
--
--
--
+**採用版（Bベース）:**
+> 「フロントからインフラまで一通り経験できましたが、広く浅くなりがちでした。今後はチームの中でコードレビューを受けながら、技術力を高めていきたいです」
+
+**本音→ポジティブ変換の対応:**
+
+| 本音（言わない） | ポジティブ変換（言う） |
+|------------------|------------------------|
+| 一人で何でもやらされる | 幅広い経験を積めた。次はチームで専門性を深めたい |
+| WordPress/PHP保守ばかり | モダンなフロントエンド技術をより深く学びたい |
+| チーム開発経験が積めない | レビュー文化のある環境で成長したい |
+| 年収が低い・評価が不公平 | （言わない。希望年収として伝える） |
+| 組織が縮小傾向 | （言わない。ネガティブすぎる） |
 
 ---
 
 ## 3. 現職での実績・職務経歴
 
 ### 期間
-- 入社:
-- 在籍期間:
+- 入社: 2024年1月4日
+- 在籍期間: 約1年（2024年1月〜現在）
 
 ### 担当プロジェクト・業務
 
@@ -159,6 +168,89 @@
   - 自ら設計・提案してChatwork/Notion連携を実装
   - 業務効率化の視点でエンジニアリング
 
+#### プロジェクト3: WordPress開発環境の近代化（syla-holdings + starpaint 3サイト）
+
+- **概要**: 4つのWordPressサイト（syla-holdings、starpaintコーポレート/マガジン/フランチャイズLP）の開発・運用環境を構築
+- **役割**: 一人で構築・導入
+- **技術スタック**: WordPress, GitHub, GitHub Actions, Local
+- **状況・課題**:
+  - 6サイトを一人で保守する体制で作業時間の確保が課題
+  - WordPress管理画面の外観エディタでコーディングしていた
+  - 本番に直接アップロードして確認する運用
+  - 1回の更新に5〜10分の手動FTP作業（ログイン→バックアップ→アップロード）
+- **行動・判断**:
+  - 既存サイトをGitHubリポジトリ化
+  - GitHub Actionsで自動FTPデプロイを構築
+  - Localでローカル開発環境を整備
+  - 管理画面コーディングからエディタ+Git運用に移行
+- **成果・実績**:
+  - 月50〜100分の手動作業削減（月10回更新 × 5〜10分）
+  - 本番前にローカルで検証可能に
+  - PR作成→マージで更新完了する運用に
+  - スターペイントのリニューアル（2ページ/2ヶ月）もこの運用で対応
+
+#### プロジェクト4: syla-properties-map（物件マップ）
+
+- **概要**: 不動産物件をGoogle Maps上にインタラクティブに表示するWebアプリ。コーポレートサイト（syla-holdings.jp）にiframeで埋め込み
+- **役割**: 一人でフルスタック開発（フロントエンド・バックエンド両方）
+- **技術スタック**: Astro 5.x, React 19, TypeScript, Radix UI, Tailwind CSS, Google Maps JavaScript API, Supabase（PostgreSQL）, Vercel
+- **状況・課題**:
+  - 既存のWordPressサイトに物件マップを追加する要件
+  - WordPress本体に組み込むとパフォーマンス低下、プラグイン依存、保守リスクが発生
+  - ブランド別（SYLA、THE SYLA、SYFORME、SYNEX）の色分け表示、管理画面（CRUD）が必要
+- **行動・判断**:
+  - WordPressではなく独立アプリとして開発し、iframeで疎結合に
+  - Astroのアイランドアーキテクチャで必要な部分だけReact化（パフォーマンス重視）
+  - Supabaseで管理画面のバックエンドを実装
+- **担当業務**:
+  - Google Maps APIを使った物件マップ表示機能
+  - ブランド・販売ステータス別のフィルタリング機能
+  - サイドバーの物件リスト表示
+  - 管理画面（物件の作成・編集・削除）
+  - Google Place ID自動取得機能
+  - 画像アップロード機能（Supabase Storage）
+  - レスポンシブデザイン対応
+  - iframe埋め込みのセキュリティ設定
+- **成果・実績**:
+  - 約2〜3週間でMVP開発（2025年9月）
+  - 200件の物件データに対応
+  - 47ファイルのTypeScript/React/Astroコードを実装
+  - 2026年1月リリース予定
+  - 本番URL: https://propertys-map.vercel.app/
+
+#### プロジェクト5: syla-infra（データ統合基盤）
+
+- **概要**: 外部SaaS（ieLove：物件管理システム）のデータをBigQueryに集約するデータ統合基盤
+- **役割**: 一人でインフラ・アプリ・CI/CD全て構築
+- **技術スタック**: Terraform/Terragrunt, GCP（BigQuery, Cloud Run Jobs, Cloud SQL, Secret Manager）, TypeScript, Node.js, Playwright, Docker, GitHub Actions, Turborepo
+- **状況・課題**:
+  - 賃貸契約データがieLove（外部SaaS）に閉じており、全社横断の分析・活用が困難
+  - データ取得・変換・格納の自動化が求められていた
+- **行動・判断**:
+  - 未経験のTerraform/BigQuery/Cloud Runを触りながら + Claude Code活用でキャッチアップ
+  - Playwrightで認証付きサイトからCSV自動取得
+  - CI/CDは安全性・可視性を重視して設計
+    - PRへのTerraform Plan自動投稿（レビュー効率化）
+    - 確認入力必須デプロイ（誤操作防止）
+    - Workload Identity Federation（キーレス認証でセキュリティ強化）
+    - パス限定テスト実行（無駄なCI回避）
+- **担当業務**:
+  - Terraform/Terragruntによる11モジュール構築（BigQuery, Cloud Run, VPC, IAM等）
+  - ETLパイプライン開発（Playwright + Node.jsでCSV取得→BigQueryロード）
+  - 18テーブルの正規化スキーマ設計（賃貸借契約、部屋、管理委託）
+  - GitHub Actions + Workload Identity Federationによる自動デプロイ
+  - Secret Manager移行、最小権限IAM設計
+  - Dockerイメージ最適化
+  - Cloud Monitoring + Slack通知の構築
+  - JavaScript → TypeScriptへの完全移行
+- **成果・実績**:
+  - 毎日9時にETL実行→10時にDB同期が自動稼働
+  - 3種類のCSV（123列+拡張予定+23列）を18テーブルに正規化
+  - Terraform 3,200行 + アプリ 18,800行の資産
+  - Dockerイメージ 2.9GB → 875MBに削減（70%減）
+  - 17件の仕様書による計画的な機能追加体制
+  - 今後の展開: 2年契約更新者への自動通知（2026年1月〜）
+
 ### 数値で示せる実績
 - PR数（直近1年）: 186件
 -
@@ -169,12 +261,24 @@
 ## 4. 強み・スキル
 
 ### 技術スキル
--
--
 
-### ソフトスキル
--
--
+| カテゴリ | スキル |
+|----------|--------|
+| フロントエンド | React, Next.js, Astro, TypeScript, Tailwind CSS, Radix UI |
+| バックエンド | Node.js, Supabase (PostgreSQL), Rails (フロント部分) |
+| インフラ | Terraform/Terragrunt, GCP (BigQuery, Cloud Run, Cloud SQL, Secret Manager), Docker |
+| CI/CD | GitHub Actions, キーレス認証 (Workload Identity Federation) |
+| その他 | WordPress, Playwright, Google Maps API |
+
+### 強み（ソフトスキル）
+
+| 強み | 根拠となる実績 |
+|------|----------------|
+| 幅広い技術領域をカバーできる | フロントエンド〜インフラまで対応、6サイトの保守を担当 |
+| 未経験技術へのキャッチアップ力 | Terraform/BigQuery/Cloud Runを触りながら習得 |
+| 効率化・自動化への意識 | FTP手動→GitHub Actions、ETL自動化 |
+| 設計判断力 | WordPress vs 独立アプリ、疎結合設計の選択 |
+| セキュリティ意識 | キーレス認証、Secret Manager、確認入力必須デプロイ |
 
 ---
 
